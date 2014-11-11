@@ -134,6 +134,7 @@
                         <h4>Você acessou o Sistema de Criptografia CPABE!</h4>
                         <br>
                         <p>O Sistema permite a criptografia de seus arquivos utilizando o método CPABE. Para conhecer um pouco mais sobre este método, <a href="${pageContext.request.contextPath}/sobre.jsp">clique aqui!</a></p>
+                        <p>Para aprender a usar este sistema, clique aqui --> <strong><a href="${pageContext.request.contextPath}/tutorial.jsp">TUTORIAL.</a></strong></p>
                         <p>Para iniciar, selecione no menu acima suas opções:  </p>
                         <p><strong> 1 - Gerenciar Cadastro:</strong></p>
                         <p> Neste menu você poderá executar ações como cadastrar, alterar ou excluir os cadastros disponíveis referentes a Usuários e Atributos.</p>

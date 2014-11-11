@@ -1,5 +1,5 @@
 <%-- 
-    Document   : index
+    Document   : avaliacao
     Created on : 01/11/2014, 16:16:28
     Author     : BV1210122
 --%>
@@ -128,32 +128,41 @@
                         </div>
                     </div>
                     <!-- FIM DO CABEÇALHO -->
-                    <div class="hero">
-                        <span class="label label-success"><h3>Seja Bem-vindo!!!</h3></span> 
-                        <br><br>                      
-                        <h4>Você acessou o Sistema de Criptografia CPABE!</h4>
-                        <br>
-                        <p>O Sistema permite a criptografia de seus arquivos utilizando o método CPABE. Para conhecer um pouco mais sobre este método, <a href="${pageContext.request.contextPath}/sobre.jsp">clique aqui!</a></p>
-                        <p>Para aprender a usar este sistema, clique aqui --> <strong><a href="${pageContext.request.contextPath}/tutorial.jsp">TUTORIAL.</a></strong></p>
-                        <p>Para iniciar, selecione no menu acima suas opções:  </p>
-                        <p><strong> 1 - Gerenciar Cadastro:</strong></p>
-                        <p> Neste menu você poderá executar ações como cadastrar, alterar ou excluir os cadastros disponíveis referentes a Usuários e Atributos.</p>
-                        <p><strong> 2 - Listar:</strong></p>
-                        <p> Neste menu você poderá listar todos os cadastros disponíveis, seja de usuários, seja de atributos, por completo ou específico por ID.</p>
-                        <p><strong> 3 - Criptografia CPABE</strong></p>
-                        <p> Este é o menu propriamente dito da criptografia. Nele será possível executar as seguintes ações:</p>
-                        <p> 3.1 - Gerar Chave Privada</p>
-                        <p> 3.2 - Criptografar</p>
-                        <p> 3.3 - Decriptografar</p>
-                        <p><strong> 4 - Criptografia CPABE Advanced</strong></p>
-                        <p> Este é o menu de criptografia para usuários avançados. Nele será possível executar as ações:</p>
-                        <p> 4.1 - Gerar Chave Privada</p>
-                        <p> 4.2 - Criptografar</p>
-                        <p> Obs.1: Uma das diferenças deste menu para o anterior refere-se a quantidade de atributos que poderão ser vinculados à chave gerada.</p>
-                        <p> Obs.2: A outra diferença refere-se a possibilidade de se criar uma política de acesso mais robusta contendo diversos atributos e operadores lógicos.</p>
-                        <br>
-                        <br>                        
+                    <div class="hero" >
+                        <h3>	TUTORIAL - CRIPTOGRAFIA CPABE SIMPLES (com apenas 1 atributo)</h3>
+
+                        <h4>Passo 1 – Cadastrar atributo e usuário na aba “Gerenciar Cadastro”:</h4>
+                        <p>1 – Selecione a opção “Cadastrar Atributo” e cadastre o atributo que deseja vincular à sua chave privada.</p>
+                        <p>IMPORTANTE:  Caso o atributo seja composto, ex. "sessão rh", este deverá ser listado utilizando-se o underline. Ex.: sessão_rh.</p>
+                        <p>2 – Selecione a opção “Cadastrar Usuário”  e cadastre o usuário e selecione, na “lista de atributos”, o atributo que deseja vincular a este usuário.</p>
+                        <p>IMPORTANTE: Se o nome desejado for COMPOSTO, este deverá ser escrito utilizando-se do underline. Ex.: Luciano_1210122</p>
+                        <h4>Passo 2 – Gerar Chave Privada</h4>
+                        <p>1 – Na aba “Criptografia CPABE”, clique na opção “Gerar Chave Privada”.</p>
+                        <p>2 – Selecione na “lista de usuários” o usuário para o qual pretende gerar a chave privada. (neste caso, o usuário cadastrado por você no passo anterior).</p>
+                        <p>3 – Clique no botão “Gerar”.</p>
+                        <p>4 – Aparecerá uma mensagem de confirmação da geração da chave e um link para download da chave gerada.</p>
+                        <p>5 – Faça o download da chave gerada e guarde sua localização pois será necessária para decriptar os arquivos criptografados com o seu atributo cadastrado.</p>
+                        <h4>Passo 3 – Encriptar</h4>
+                        <p>1 – Na aba “Criptografia CPABE”, clique na opção “Encriptar”.</p>
+                        <p>2 – Para encriptar, primeiramente clique no botão “Selecionar Arquivo” e selecione o arquivo a ser criptografado.</p>
+                        <p>3 – Clique no botão "Upload".</p>
+                        <p>IMPORTANTE: Se o arquivo possuir NOME COMPOSTO ou CARACTERE ESPECIAL (Ç,~,^,@, etc) o nome deverá ser editado e escrito utilizando-se do underline antes de ser feito o upload. Ex.: Encriptação 12.doc --> Encriptacao_12.doc</p>
+                        <p>4 – Selecione, na “lista de atributos”, o atributo com o qual deseja criptografar o arquivo. Lembrando que, somente o usuário que possuir na chave privada o mesmo atributo conseguirá decriptografar este arquivo.</p>
+                        <p>5 – Aparecerá uma mensagem de confirmação da criptografia e um link para download do arquivo criptografado. O arquivo possui a extensão “.cpabe”. </p>
+                        <p>OBS.: Caso apareça a mensagem de confirmação da criptografia e ao tentar fazer o download aparecer uma mensagem de erro com a informação de que o arquivo não está disponível no servidor, o problema deve ser relacionado ao nome do arquivo (ver passo 3 – item 3) ou nome do atributo (ver passo 1 – item 1).</p>
+                        <p>OBS.2: Este erro pode acontecer devido o sistema montar, com os dados selecionados, uma “String de comandos” que é enviada ao Shell Comando Linux, que por sua vez, executa o sistema de criptografia CPABE. Se os dados cadastrados (nome de usuários, arquivos)  possuir uma das falhas elencadas (espaços em branco, caracteres especiais, etc), esta String não é montada corretamente e o sistema não criptografa o arquivo.</p>
+                        <p>6 – Faça o download do arquivo criptografado, guarde sua localização pois será necessário fazer o upload deste arquivo para decriptação.</p>
+                        <p>7 – Por fim, tente abrir este arquivo e acessar o seu conteúdo.</p>
+                        <h4>Passo 3 – Decriptar</h4>
+                        <p>1 – Na aba “Criptografia CPABE”, clique na opção “Decriptar”.</p>
+                        <p>2 – Para Decriptar, primeiramente clique no 1º botão “Selecionar Arquivo” e selecione o arquivo a ser descriptografado.</p>
+                        <p>3 – Na sequência clique no 2º botão “Selecionar Arquivo” e selecione a chave privada com a qual tentará descriptografar o arquivo.</p>
+                        <p>4 – Clique no botão "Upload".</p>
+                        <p>5 – O sistema mostrará o arquivo e a chave selecionada. Clique no botão “Descriptografar”.</p>
+                        <p>6 – Aparecerá uma mensagem de confirmação do comando de descriptografia executado com sucesso e um link para download do arquivo descriptografado. </p>
+                        <p>OBS.: Ao tentar fazer o download aparecer uma mensagem de erro com a informação de que o arquivo não está disponível no servidor, significa que a chave privada informada não preenche os requisitos para descriptografar o arquivo, ou seja, não possui em seu interior o atributo que permite a decodificação.</p>
                     </div>
+
                     <!-- INÍCIO DO RODAPÉ -->
                     <div class="well" id="rodapé" align="center"> 
                         <p><small>______________________________________________________________________________________________________________________</small></p> 

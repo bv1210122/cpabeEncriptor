@@ -163,7 +163,7 @@
                             <div class="well">
                                 <span class="label label-success"><h3>Decriptar</h3></span>
                                 <h4>Orientações Gerais:</h4>
-                                <p>Para decriptar, primeiramente vamos selecionar o arquivo a ser descriptografado:</p>
+                                <p>Para decriptar, selecione o arquivo a ser descriptografado e a chave privada com a qual pretende abrir o arquivo:</p>
                                 <form method="post" action="${pageContext.request.contextPath}/UploadDecriptacaoServlet" enctype="multipart/form-data">
                                     <label>Arquivo Criptografado:<input type="file" name="fileName" /></label>
                                     <br>

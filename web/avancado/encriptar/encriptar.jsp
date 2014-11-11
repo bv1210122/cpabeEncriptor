@@ -107,7 +107,7 @@
                                                 </li>                                               
                                                 <li class="divider"></li>
                                                 <li>
-                                                    <a href="${pageContext.request.contextPath}/formularios/usuario/listaUsuárioID.jsp">Usuário por ID</a>
+                                                    <a href="${pageContext.request.contextPath}/formularios/usuario/listaUsuarioID.jsp">Usuário por ID</a>
                                                 </li>
                                                 <li>
                                                     <a href="${pageContext.request.contextPath}/formularios/atributo/listaAtributoID.jsp">Atributo por ID</a>
@@ -166,7 +166,7 @@
 
                                 <h4>Orientações Gerais:</h4>
                                 <p>Para encriptar, primeiramente <i><strong>selecione o arquivo</strong></i> a ser criptografado e clique no botão <i><strong>"Upload"</strong></i>:</p>
-                                <p>IMPORTANTE: Se o arquivo possuir NOME COMPOSTO, o nome deverá ser escrito utilizando-se do <i>underline</i>. Ex.: Exemplo_12.doc</p>
+                                <p>IMPORTANTE: Se o arquivo possuir NOME COMPOSTO, CARACTERE ESPECIAL (Ç, ~,^@, etc) o nome deverá ser editado e escrito utilizando-se do <i>underline</i> antes de ser feito o upload. Ex.: Encriptação 12.doc --> Encriptacao_12.doc</p>
                                 <form method="post" action="${pageContext.request.contextPath}/UploadDownloadFileAdvancedServlet" enctype="multipart/form-data">                                  
                                     <input type="file" name="fileName" />
                                     <br>

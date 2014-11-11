@@ -116,7 +116,7 @@
                                                 </li>                                               
                                                 <li class="divider"></li>
                                                 <li>
-                                                    <a href="${pageContext.request.contextPath}/formularios/usuario/listaUsuárioID.jsp">Usuário por ID</a>
+                                                    <a href="${pageContext.request.contextPath}/formularios/usuario/listaUsuarioID.jsp">Usuário por ID</a>
                                                 </li>
                                                 <li>
                                                     <a href="${pageContext.request.contextPath}/formularios/atributo/listaAtributoID.jsp">Atributo por ID</a>
@@ -180,7 +180,7 @@
                                                 <input type="hidden" name="atributo_id"  class="input-large" value="${requestScope.atributo.atributo_id}" >
                                                 <label>Nome: </label>
                                                 <input placeholder="Digite o Nome" type="text" size="20" name="atributo_nome" value="${requestScope.atributo.atributo_nome}"/>
-                                                <br/>
+                                                <p>Obs.: Caso o <strong>atributo seja composto</strong>, ex. "sessão rh" este deverá ser listado utilizando-se o <strong><i>underline</i></strong>. Ex.: sessão_rh.</p>
                                                 <label>Descrição:</label>
                                                 <textarea placeholder="Apresente uma breve Descrição do Atributo. Ex: Pertencente aos quadros de funcionário do Setor X." rows="5" name="atributo_descricao" class="input-xxlarge">${requestScope.atributo.atributo_descricao}</textarea>
                                                 <br>

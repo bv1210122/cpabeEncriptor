@@ -125,7 +125,7 @@
                                                 </li>                                               
                                                 <li class="divider"></li>
                                                 <li>
-                                                    <a href="${pageContext.request.contextPath}/formularios/usuario/listaUsuárioID.jsp">Usuário por ID</a>
+                                                    <a href="${pageContext.request.contextPath}/formularios/usuario/listaUsuarioID.jsp">Usuário por ID</a>
                                                 </li>
                                                 <li>
                                                     <a href="${pageContext.request.contextPath}/formularios/atributo/listaAtributoID.jsp">Atributo por ID</a>
@@ -189,7 +189,7 @@
                                                 <input type="hidden" name="usuario_id"  class="input-large" value="${requestScope.usuario.usuario_id}" >
                                                 <label>Usuário: </label>
                                                 <input placeholder="Digite o Nome de usuário" type="text" size="20" name="usuario_user" value="${requestScope.usuario.usuario_user}" />
-                                                <br/>
+                                                <p>IMPORTANTE: Se o nome desejado for COMPOSTO, este deverá ser escrito utilizando-se do <i>underline</i>. Ex.: Luciano_1210122</p>
                                                 <label>Senha: </label>
                                                 <input placeholder="Digite a senha" type="text" size="20" name="usuario_pass" value="${requestScope.usuario.usuario_pass}"/>
                                                 <br/>
